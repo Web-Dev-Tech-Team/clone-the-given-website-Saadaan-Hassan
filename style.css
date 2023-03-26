@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* ----CSS Custom Properties---- */
+:root {
+  /* Colors */
+  --color-primary: hsl(0, 0%, 0%);
+
+  --color-accent-400: hsl(0, 0%, 56%);
+  --color-accent-300: hsl(0, 0%, 79%);
+  --color-accent-200: hsl(0deg 0% 79.22% / 52.16%);
+
+  --color-neutral-100: hsl(0, 0%, 100%);
+
+  /* Font Family */
+  --ff-primary: "Roboto", sans-serif;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Font Sizes */
+  --fs-large: 1.5rem;
+  --fs-medium: 1rem;
+
+  /* Spacing */
+  --s-large: 3rem;
+  --s-medium: 1.5rem;
+  --s-small: 0.5rem;
+}
+
+* {
+  font-family: var(--ff-primary);
+}
+
+/* ----General Styling---- */
+.navbar::before {
+  content: "";
+  background: url(Images/Illustration_2.png) center/cover;
+  /* background: red; */
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  z-index: -1;
+  left: 15rem;
+}
+
+.navbar {
+  position: relative;
+  margin: var(--s-small) var(--s-medium);
+  align-items: center;
+}
+
+.logo {
+  margin-top: -1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav-items {
+  margin: 0 var(--s-large);
+}
+
+/* --Hero Section-- */
+.hero {
+  margin: var(--s-large);
+}
+
+.hero-image {
+  width: fit-content;
+  position: relative;
+}
+
+form {
+  position: relative;
+}
+
+form::before {
+  content: "";
+  background: url(Images/Illustration_2.png) center/cover;
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  z-index: -1;
+  left: -8rem;
+}
+
+form::after {
+  content: "";
+  background: url(Images/Illustration_1.png) center/cover;
+  position: absolute;
+  width: 20rem;
+  height: 15rem;
+  z-index: -1;
+  right: -5rem;
+  bottom: -2rem;
+}
+
+.input-fields {
+  width: max-content;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+textarea {
+  margin: var(--s-medium) var(--s-medium);
+  padding: var(--s-small);
+  background-color: transparent;
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid var(--color-accent-300);
+}
+
+textarea {
+  border: 2px solid var(--color-accent-300);
+  border-top: 0;
+  width: 91%;
+}
+
+.form-icons {
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  margin-right: var(--s-large);
+}
+
+.form-icons img {
+  margin: 6rem 0 0;
+}
+
+/* --Footer Section-- */
+footer{
+    background-color: var(--color-accent-200);
+}
+
+.footer-links{
+    justify-content: space-around;
+    padding-top: var(--s-large);
+}
+
+.footer-links div{
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+.footer-links div ul{
+    padding: 0;
+}
+
+.social-links{
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 2px 0px 5px 7px var(--color-accent-300);
+}
+
+.social-links img{
+    width: 25px;
+    margin: 0 var(--s-small);
+}
+
+.social-links:nth-child(2){
+    font-weight: bold;
+    font-style: italic;
+    color: hsl(0, 0%, 43%);
+}
+
+.social-links:last-child{
+    font-weight: lighter;
+    font-style:normal;
+    color: var(--color-accent-400);
+}
+
+/* ----Utility Classes---- */
+.flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-accent-400);
+}
+
+.btn {
+  width: 5.5rem;
+  margin-top: var(--s-medium);
+  background: transparent;
+  border: 2px solid var(--color-accent-300);
+}
+
+/* Font Sizes */
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.fs-medium {
+  font-size: var(--fs-medium);
+}
+
+.fs-large {
+  font-size: var(--fs-large);
+}
+
+/* Font Weights */
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
